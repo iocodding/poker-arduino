@@ -11,41 +11,52 @@ const app = initializeApp(firebaseConfig);
 
 
 const database = getDatabase(app);
-const starCountRef = ref(database, "/users",);
 
-const www = shallowRef()
-
-onValue(starCountRef, (snapshot) => {
+const ivoCardsRef = ref(database, "/users/ivo",);
+const ivoCards = shallowRef()
+onValue(ivoCardsRef, (snapshot) => {
     const data = snapshot.val();
-    www.value = data;
+    ivoCards.value = data;
 });
 
-function writeUserData() {
-    set(ref(database, 'users/0',), { hand: 'ss', hand2: 'Hand2' });
-}
+const doichiCardsRef = ref(database, "/users/doichi",);
+const doichiCards = shallowRef()
+onValue(doichiCardsRef, (snapshot) => {
+    const data = snapshot.val();
+    doichiCards.value = data;
+});
+
+
 
 </script>
 <template>
     <div style="background: #242424; height: 100vh">
-        <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/052011/pokerstars_0.jpg?itok=a-5zL_Ae" />
-        <div>
-            <div class="flex gap-6 items-center" style="margin-left: 1000px">
-
-                <img v-if="www && www[0] && www[0].hand1" :src="`/${www[0].hand1}.png`" style="width: 200px; ">
-                <img v-if="www && www[0] && www[0].hand2" :src="`/${www[0].hand2}.png`" style="width: 200px; ">
-
+        <div class="flex flex-col gap-8" style="position: fixed; bottom: 60px; left: 10px">
+            <div v-if="ivoCards && ivoCards.length == 2" class="flex gap-6 items-center">
                 <img :src="`/assets/ivo.png`" style="width: 200px; ">
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-1">
+                    <div class="flex">
+                        <img v-if="ivoCards" v-for="w in ivoCards" :src="`/cards/${w}.png`" style="width: 80px; ">
+                    </div>
                     <div class="px-4 py-2 rounded-full font-semibold" style=" background: #EFEFEF; font-size: 22px">
                         Ivaylo Ovcharov
                     </div>
-                    <div class="flex px-4 py-2 rounded-full font-semibold"
-                        style="background: #B90020; color: white;  font-size: 18px; width: fit-content">
-                        Wins: 17
-                    </div>
+
                 </div>
             </div>
-            <br>
+            <div v-if="doichiCards && doichiCards.length == 2" class="flex gap-6 items-center">
+                <img :src="`/assets/doichi.png`" style="width: 200px; ">
+                <div class="flex flex-col gap-1">
+                    <div class="flex">
+                        <img v-if="doichiCards" v-for="w in doichiCards" :src="`/cards/${w}.png`" style="width: 80px; ">
+                    </div>
+                    <div class="px-4 py-2 rounded-full font-semibold" style=" background: #EFEFEF; font-size: 22px">
+                        Doichin Alexandrov
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
     </div>
