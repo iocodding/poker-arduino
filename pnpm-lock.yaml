@@ -140,6 +140,9 @@ dependencies:
   poker-odds-calc:
     specifier: ^0.0.14
     version: 0.0.14
+  simple-vue-camera:
+    specifier: ^1.1.3
+    version: 1.1.3
   swr-vue:
     specifier: ^1.9.1
     version: 1.9.1(vue@3.3.4)
@@ -164,6 +167,9 @@ dependencies:
   vue-toastification:
     specifier: 2.0.0-rc.5
     version: 2.0.0-rc.5(vue@3.3.4)
+  vue-web-cam:
+    specifier: ^1.9.0
+    version: 1.9.0
   vue3-dropzone:
     specifier: ^2.1.2
     version: 2.1.2(vue@3.3.4)
@@ -8429,6 +8435,10 @@ packages:
       - supports-color
     dev: true
 
+  /simple-vue-camera@1.1.3:
+    resolution: {integrity: sha512-GVAYq1BMI9cHt+h24tu2dfIFFvhjVQ1M8IkK5LmrKcYoBA8FZlLNlhrHC2NnTPbMAXIvJn1Bqx8X6Q31+Y2+jA==}
+    dev: false
+
   /sirv@2.0.3:
     resolution: {integrity: sha512-O9jm9BsID1P+0HOi81VpXPoDxYP374pkOLzACAoyUQ/3OUVndNpsz6wMnY2z+yOxzbllCKZrM+9QrWsv4THnyA==}
     engines: {node: '>= 10'}
@@ -9550,6 +9560,13 @@ packages:
       vue: ^3.0.2
     dependencies:
       vue: 3.3.4
+    dev: false
+
+  /vue-web-cam@1.9.0:
+    resolution: {integrity: sha512-AyEo8WWHpQGvMgWrxV6NFB6L6ojf85iTt8SeBokobYsr+Ev3qHKzR/L9C1aeW+lQ3+PSuRVUK9dVKHWkIiK+vA==}
+    engines: {node: '>= 8.10.0'}
+    dependencies:
+      vue: 2.7.15
     dev: false
 
   /vue3-dropzone@2.1.2(vue@3.3.4):

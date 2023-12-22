@@ -4,6 +4,6 @@ import Camera from "simple-vue-camera";
 <template>
   <div style="background: #242424; height: 100vh">
     <Camera style="width: 100px" />
-    <GameBoard />
+    <GameBoard :hidden="true" />
   </div>
 </template>

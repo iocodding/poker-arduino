@@ -54,6 +54,7 @@
     "pinia-plugin-persistedstate": "^3.2.0",
     "poker-odds": "^1.0.1",
     "poker-odds-calc": "^0.0.14",
+    "simple-vue-camera": "^1.1.3",
     "swr-vue": "^1.9.1",
     "tailwind-variants": "^0.1.8",
     "vidstack": "^1.5.5",
@@ -62,6 +63,7 @@
     "vue-flatpickr-component": "^11.0.3",
     "vue-plyr": "^7.0.0",
     "vue-toastification": "2.0.0-rc.5",
+    "vue-web-cam": "^1.9.0",
     "vue3-dropzone": "^2.1.2",
     "vue3-smooth-dnd": "^0.0.5",
     "vuedraggable": "^2.24.3"
